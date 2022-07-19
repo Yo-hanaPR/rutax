@@ -1,0 +1,26 @@
+instalar admin LTE
+
+correr php artisan migrate:refresh en la base de datos de "produccion" para tener la tabla de ganancias
+
+CREAR MENSAJES DE EXITO EN EL CONTROLADOR CUANDO SE HAGAN LOS REGISTROS, tipo VICTOR HA ABONADO 4900 SLP. o YOHANNA REGISTRO UNA GANANCIA DE TANTO (AdminController 29 y 47)
+
+CONSUMIT API DE MONITOR DOLAR y coinmarketcap y poner en el iinput de los formularios de registro de inversiones y ganancias.
+
+Como hacer que si se presiona NO, no se llame a la funcion de php que va a pintar la celda de roko
+	y cuando se le dé que sí entonces pinte la celda de rojo, y luego deshabilitar este boton de retirar? (functions.js 11)
+
+copiar contenido al portapapeles con solo hacer click (admin.blade.php 77). Instalar librería.
+Acomodar esto pasando un parametro variable a la funcion copyToClipboard
+
+Como hacer que los montos se vean con solo dos decimales? eso es una funcion de php que no recuerdo el nombre.
+
+Poner FAVICON
+
+boton de retirar no se deshabilita permanentemente.. tampoco se deshabilita en todos los registros (Admin.blade.php 86)
+Aqui tambien hay que mandar un parametro variable a la funcion confirmar para que se deshabilite el boton correcto
+
+vincular los botones de editar, eliminar y actualizar a las rutas correspondientes.. No sé como se escribe la ruta en laravel. (Admin.blade.php 117 y 118) Ya las pruebas pasan, si está funcionando el CRUD.
+
+Arreglar que la funcion de copia sirva para copiar el id correspondiente, porque solo esta copiando el primero. (admin-blade.php 155)
+
+Acomodar el valor del SLP, que se actualice desde el front en los formularios correspondientes y se guarden los datos en base a ese valor
