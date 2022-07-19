@@ -24,3 +24,4 @@ Route::resources([
 	'Servicios'=>'App\Http\Controllers\ServiciosController',
 	'Gastos'=>'App\Http\Controllers\GastosController'
 ]);
+Route::post('eliminareservas/{id}','App\Http\Controllers\ReservaController@eliminareservas')->name('eliminareservas');

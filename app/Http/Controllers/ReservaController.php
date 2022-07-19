@@ -17,8 +17,9 @@ class ReservaController extends Controller
     public function index()
     {
         //
+        $viajes= viaje::all();
         $reservas= viaje_pasajero::all();
-        return view('reservas.listareservas',compact('reservas'));
+        return view('reservas.listareservas',compact('reservas','viajes'));
     }
 
     /**
@@ -101,6 +102,13 @@ class ReservaController extends Controller
     {
         //
         $reserva = viaje_pasajero::find($id)->delete();
+        return redirect('/home');
+    }
+
+    public function eliminareservas($id){
+
+dd("HOLA");
+        viaje_pasajero::where('id_destino', $id)->delete();
         return redirect('/home');
     }
 }

@@ -8,6 +8,9 @@
 <a class="btn btn-success" href="{{ url('/Reserva/create') }}">Nueva compra</a>
 <div class="container">
 	<div class="row justify-content-center">
+
+		
+
 			<table class="table-striped" width="100">
 				<tr>
 					<th>Número</th>
@@ -20,6 +23,7 @@
 					<th>Monto Restante</th>
 					<th>Costo Total del FULLDAY</th>
 					<th>Fecha de reservación</th>
+					<th>Acciones</th>
 				</tr>
 				@foreach($reservas as $reserva)
 					<tr></td>
@@ -38,6 +42,15 @@
 						<td> {{$reserva->TicketconDestinoA->precio_fijo - $reserva->pago}} $</td>
 						<td> {{$reserva->TicketconDestinoA->precio_fijo}} $</td>
 						<td> {{$reserva->created_at}}</td>
+						<td>
+							
+							<form method="post" action="{{route('Reserva.destroy',['Reserva'=>$reserva->id])}}" role="form" >
+							@method("delete")
+							
+							{{csrf_field()}}
+							<button type="submit" class="btn btn-danger">ELIMINAR</button>
+
+						</td>
 					</tr>
 				@endforeach
 			</table>

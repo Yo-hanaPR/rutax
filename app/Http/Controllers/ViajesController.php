@@ -69,6 +69,8 @@ class ViajesController extends Controller
     public function show($id)
     {
         //
+        $viaje= viaje::where('id_viaje',$id)->get();
+        return view('viajes.detalleviaje',compact('viaje'));
     }
 
     /**

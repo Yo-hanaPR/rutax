@@ -21,6 +21,7 @@
 					<th>Nos iremos en una unidad</th>
 					<th>Costo del full day por puesto</th>
 					<th>Ganancia total estimada del viaje</th>
+					<th>Acciones</th>
 				</tr>
 				@foreach($viajes as $viaje)
 				<tr>
@@ -41,6 +42,22 @@
 					
 					<td>{{ $viaje->precio_fijo}} $</td>
 					<td>{{ $viaje->ganancia_total}} $</td>
+					<td>
+						
+						<form method="post" action="{{route('Viajes.destroy',['Viaje'=>$viaje->id_viaje])}}" role="form" >
+							@method("delete")
+							
+							{{csrf_field()}}
+							<button type="submit" class="btn btn-danger">ELIMINAR</button>
+
+							*solo podrás eliminar si no hay reservas asociadas.
+							Para eliminar las reservas asociadas entra a la página de detalles del viaje para eliminarlas de forma masiva.
+							Una vez hecho ésto podrás utilizar éste botón para eliminar el viaje.
+							Como poner una pantalla de error personalizada si el usuario le da click a éste botón no salga el error de laravel?
+						<a href="{{ url('Viajes/' . $viaje->id_viaje) }} " class="btn btn-info">VER</a>
+							
+						</form>
+					</td>
 				</tr>
 				@endforeach
 			</table>

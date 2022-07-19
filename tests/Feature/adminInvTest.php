@@ -20,8 +20,10 @@ class adminInvTest extends TestCase
          $response->assertStatus(200);
     }
 
-
-
+    public function test_elimina_reserva(){
+      $response = $this->post('eliminareservas/',["id"=>'1']);
+         $response->assertStatus(200);
+    }
 /***********************************************/
 /*
 /*

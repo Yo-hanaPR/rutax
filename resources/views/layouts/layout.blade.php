@@ -10,15 +10,14 @@
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - Beatsys</title>
+    <title>@yield('title') - Rutasxvenezuela</title>
     <!-- Icons-->  
     <!-- Jquery -->
 
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{asset('js/jquery.min.js')}}"></script> 
+
 
 <script type="text/javascript" src="{{asset('vue/vue.js')}}"></script> 
 <script type="text/javascript" src="{{asset('vue/vue-resource.js')}}"></script> 
@@ -60,8 +59,6 @@
 
   @include('includes.navbar')
   <body>
-
-    Boton de atras
       <div class="row">
           <div class="col-md-11 offset-1">
               <div class="p-4">
