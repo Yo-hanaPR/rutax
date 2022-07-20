@@ -14,14 +14,19 @@ class adminInvTest extends TestCase
      * @return void
      */
 
-    public function test_inversionDinero(){
+   /* public function test_inversionDinero(){
      
-        $response = $this->get('/home');
+        $response = $this->get('user/1',["id"=>'1']);
          $response->assertStatus(200);
-    }
-
+    }*/
+/*
     public function test_elimina_reserva(){
-      $response = $this->post('eliminareservas/',["id"=>'1']);
+      
+      $response = $this->post('eliminareservas/1',["id"=>'1']);
+         $response->assertRedirect('home');
+    }*/
+    public function test_summary(){
+      $response = $this->get('home');
          $response->assertStatus(200);
     }
 /***********************************************/
@@ -44,41 +49,41 @@ class adminInvTest extends TestCase
 /*
 public function test_registro_destino(){
 
-        $nombre='Merida';
-        $direccion='Sur oeste de venezuela';
+        $nombre='Valle de la pascua';
+        $direccion='Falcon';
         $url='una url'; 
         
         $input=["nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>'COSAS QUE ME DIGA LA GENTE DEL DESTINO'];
          $response = $this->post('/Destinos',$input);
           $response->assertRedirect('home');
     }
-*/
-/*
+*//*
+
 public function test_registro_viaje(){
 
-        $id_destino='1';
+        $id_destino='3';
         $precio_fijo='19'; 
-        $fecha_salida='2020-03-02';
+        $fecha_salida='2020-05-02';
         $hora_salida='02:30 p. m.';
         $unidad=1;
         
         $input=["destino"=>$id_destino,"precio_fijo"=>$precio_fijo,"fecha_salida"=>$fecha_salida,"hora_salida"=>$hora_salida,"id_unidad"=>$unidad];
          $response = $this->post('/Viajes',$input);
           $response->assertRedirect('home');
-    }*/
-
+    }
+*/
     /*
 public function test_registro_pasajero(){
 
-        $nombre='Yohanna';
-        $apellido='Padrino';
+        $nombre='Victor';
+        $apellido='Silgado';
         $cedula='23622892';
 
         $direccion='Caracas';
         $telefono='242342';
         $correo='yohapadri';
         $edad='25';
-        $id_metodo_pago=2;
+        $id_metodo_pago=1;
         
         $input=["nombre"=>$nombre,"apellido"=>$apellido,"cedula"=>$cedula,"direccion"=>$direccion,"telefono"=>$telefono,"correo"=>$correo,"edad"=>$edad,"id_metodo_pago"=>$id_metodo_pago];
          $response = $this->post('/Pasajeros',$input);
@@ -88,8 +93,8 @@ public function test_registro_pasajero(){
 
 /*
 public function test_reserva_viaje(){
-        $id_viaje='2';
-        $id_pasajero='1'; 
+        $id_viaje='1';
+        $id_pasajero='2'; 
         $promo=0;
         $pago=36;
         
@@ -98,8 +103,8 @@ public function test_reserva_viaje(){
          $response = $this->post('/Reserva',$input);
           $response->assertRedirect('home');
 }
-
 */
+
 /*
 
 

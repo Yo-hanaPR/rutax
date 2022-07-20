@@ -107,8 +107,7 @@ class ReservaController extends Controller
 
     public function eliminareservas($id){
 
-dd("HOLA");
-        viaje_pasajero::where('id_destino', $id)->delete();
+        viaje_pasajero::where('id_viaje', $id)->delete();
         return redirect('/home');
     }
 }

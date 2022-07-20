@@ -1,0 +1,37 @@
+Funciones utiles para trabajar con la libreria CARBON
+
+//Igual a    
+    var_dump($first->eq($second));                     // bool(false)
+    var_dump($first->equalTo($second));                // bool(false)
+    var_dump($first == $second);                       // bool(false)
+
+//Diferente a...    
+    var_dump($first->ne($second));                     // bool(true)
+    var_dump($first->notEqualTo($second));             // bool(true)
+    var_dump($first != $second);                       // bool(true)
+
+//Mayor que...    
+    var_dump($first->gt($second));                     // bool(false)
+    var_dump($first->greaterThan($second));            // bool(false)
+    var_dump($first->isAfter($second));                // bool(false)
+    var_dump($first > $second);                        // bool(false)
+
+//Mayor ó igual que...    
+    var_dump($first->gte($second));                    // bool(false)
+    var_dump($first->greaterThanOrEqualTo($second));   // bool(false)
+    var_dump($first >= $second);                       // bool(false)
+
+
+//Menor que... 
+    var_dump($first->lt($second));                     // bool(true)
+    var_dump($first->lessThan($second));               // bool(true)
+    var_dump($first->isBefore($second));               // bool(true)
+    var_dump($first < $second);                        // bool(true)
+
+//Menor o igual que...
+    var_dump($first->lte($second));                    // bool(true)
+    var_dump($first->lessThanOrEqualTo($second));      // bool(true)
+    var_dump($first <= $second);                       // bool(true)
+
+
+Claramente para que estos métodos funcionen correctamente, ambas variables de fecha deben de ser una instancia de la clase Carbon.

@@ -65,7 +65,6 @@
                         <div class="col-md-1 offset-11">
                         <a href="{{ url()->previous() }} " class="btn btn-success">Volver</a>
 
-                        <button @click="alert('Alpine Js is working !')">Click</button>
                         </div>
                         @yield('content')
 

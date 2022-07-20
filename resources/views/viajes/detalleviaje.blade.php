@@ -29,7 +29,7 @@
 				</tr>
 				<tr>
 					<td colspan="9">
-						<form method="post" action="{{url('eliminareservas',['Reserva'=>$detalle_viaje->id_destino])}}" role="form" >
+						<form method="post" action="{{url('eliminareservas',['id'=>$detalle_viaje->id_viaje])}}" role="form" >
 							@method("post")
 							
 							{{csrf_field()}}

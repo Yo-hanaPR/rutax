@@ -9,11 +9,10 @@
 <h1>Aquí voy a mostrar cuantos viajes he hecho, cuanto he ganado a punta de viajes, progreso de cuanto llevo de la meta total de ganancia (barrita de progreso)</h1>
 
 
-<h2>FECHA ACTUAL: {{$date}} </h2>
 <h4>Total de viajes programados: {{$cantviajes}}</h4>
 <h4>Total de pasajeros: {{$cantpasajeros}}</h4>
 <h4>Total de reservas: {{$reservas}}</h4>
-<h4>Total de viajes concretados:</h4>	
+<h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
 	
 
 necesito saber la fecha de un viaje y compararla con la fecha de hoy. Si hoy es esa fecha, entonces el viaje se concreto..
@@ -36,8 +35,6 @@ PAGO SERVICIOS EN VIAJE: ------
 GANANCIA REAL DE LA EMPRESA: ______
 
 
-
-OPCION ELIMINAR VIAJE Y SUS RESERVAS ASOCIADAS: 
 	
 
 	
