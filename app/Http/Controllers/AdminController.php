@@ -27,7 +27,9 @@ class AdminController extends Controller
         $date = Carbon::now()->format('Y-m-d');
         $date= Carbon::parse($date);
         $viajesconcretados=0;
+        $ganancias_totales_viajes=0;
         $hoy=$date;
+        $gastos_totales=0;
 
 
         $fechas_salidas_todos_los_viajes=  DB::table('viaje')->selectRaw("fecha_salida")->selectRaw('id_viaje')->get();
@@ -35,14 +37,28 @@ class AdminController extends Controller
         for($i=0;$i<count($fechas_salidas_todos_los_viajes);$i++){
             $fechasalidaviaje_formateada= Carbon::parse($fechas_salidas_todos_los_viajes[$i]->fecha_salida);
 
-        if(($hoy)->gt($fechasalidaviaje_formateada)){
-                    $viajesconcretados= $viajesconcretados+1;
-    }
+            if(($hoy)->gt($fechasalidaviaje_formateada)){
+                
+                $viaje= viaje::where('id_viaje',$fechas_salidas_todos_los_viajes[$i]->id_viaje)->first();
 
+                if($viaje->PasajerosqueViajan->count()>0){
 
-}
+                    for($j=0;$j<$viaje->PasajerosqueViajan->count();$j++){
+                        $ganancias_totales_viajes= $ganancias_totales_viajes+$viaje->PasajerosqueViajan[$j]->pago;
+                    }
+                     
+                }
 
-return view('summary',compact('cantpasajeros','cantviajes','viajes','reservas','date','viajesconcretados'));
+                if($viaje->GastosdelViaje->count()>0){
+                    for($k=0;$k<$viaje->GastosdelViaje->count();$k++){
+                        $gastos_totales= $gastos_totales+$viaje->GastosdelViaje[$k]->costo;
+                    }
+                }
+                $viajesconcretados= $viajesconcretados+1;
+            }
+        }
+        $ganancia_real= $ganancias_totales_viajes-$gastos_totales;
+    return view('summary',compact('cantpasajeros','cantviajes','viajes','reservas','date','viajesconcretados','ganancias_totales_viajes','gastos_totales','ganancia_real'));
     }
 }
 ?>

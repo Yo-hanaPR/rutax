@@ -6,8 +6,8 @@
 
 <h1>Resumen de operaciones</h1>
 
-<h1>Aquí voy a mostrar cuantos viajes he hecho, cuanto he ganado a punta de viajes, progreso de cuanto llevo de la meta total de ganancia (barrita de progreso)</h1>
-
+<h1>Aquí voy a mostrar progreso de cuanto llevo de la meta total de ganancia (barrita de progreso)</h1>
+pero la barrita de progreso mejor ponla para cada viaje, en el detalle de cada viaje puede ser.. Será mas facil asi.
 
 <h4>Total de viajes programados: {{$cantviajes}}</h4>
 <h4>Total de pasajeros: {{$cantpasajeros}}</h4>
@@ -15,27 +15,11 @@
 <h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
 	
 
-necesito saber la fecha de un viaje y compararla con la fecha de hoy. Si hoy es esa fecha, entonces el viaje se concreto..
-
-pero mañana no será esa fecha..
-entonces necesito una funcion que SI HOY ES MAYOR QUE ESA FECHA.
-
-un viaje se concretó si NO está anulado (suspendido) y la fecha de salida es igual o menor que la fecha de hoy.
+	<h4>ganancias NETAS en viajes concretados: {{$ganancias_totales_viajes}} $</h4>
+	<h4>Gastos totales en viajes concretados: {{$gastos_totales}} $</h4>
+	<h4>Ganancia real de la empresa: {{$ganancia_real}}$</h4>
 
 
-
-En ese caso, si el viaje se concretó, entonces consulta la tabla de viaje_pasajero, vé cuales son las reservas para ese viaje, cuando pagó cada persona, y sumas esos montos para saber CUANTO DINERO EN TOTAL (en realidad) está dejando éste viaje. Lo puedes comparar con el de GANANCIA ESTIMADA o no..
-
-SI se sacaron 300, a esos 300 se le resta lo que se gastó en servicios en ese viaje. Y lo que queda es la GANANCIA REAL DEL VIAJE:
-
-
-informacion: 
-GANANCIA NETA: ----
-PAGO SERVICIOS EN VIAJE: ------
-GANANCIA REAL DE LA EMPRESA: ______
-
-
-	
 
 	
 	
