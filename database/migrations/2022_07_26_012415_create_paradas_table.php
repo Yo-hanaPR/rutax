@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGastosTable extends Migration
+class CreateParadasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateGastosTable extends Migration
      */
     public function up()
     {
-        Schema::create('gastos', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
-            $table->integer('id_viaje');
-            $table->integer('id_servicio');
-            $table->integer('costo')->nullable();
+        Schema::create('paradas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('lugar');
+            $table->string('pto_referencia');
+            $table->string('horario');
+            $table->string('servicio');
+            $table->string('metodo_pago');
             $table->timestamps();
-
-            
         });
     }
 
@@ -31,6 +31,6 @@ class CreateGastosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gastos');
+        Schema::dropIfExists('paradas');
     }
 }

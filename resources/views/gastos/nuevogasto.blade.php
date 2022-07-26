@@ -2,8 +2,8 @@
 @extends('layouts.app')
 
 @section('content')
-
 <h1>Gastos asociados a cada viaje</h1>
+
 
 <div class="container">
 	<div class="row">
@@ -61,6 +61,7 @@
 					</div>
 				</form>
 		</div>
+
 	</div>
 </div>
 

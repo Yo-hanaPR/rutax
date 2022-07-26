@@ -20,7 +20,7 @@ class CreateDestinosTable extends Migration
             $table->string('url');
             $table->string('detalles');
             $table->string('distancia');
-            $table->bigInteger('phone');
+            $table->string('phone');
             $table->string('reference');
             $table->string('business_hours');
             $table->string('history');

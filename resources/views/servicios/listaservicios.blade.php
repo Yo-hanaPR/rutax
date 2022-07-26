@@ -3,7 +3,7 @@
 @section('content')
 
 <h1>Servicios Disponibles</h1>
-
+<a class="btn btn-success" href="{{url('Paradas')}}">Paradas</a>
 <div class="container">
 	<div class="row">
 		<div class="col-md-7">

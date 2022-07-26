@@ -21,6 +21,7 @@
 <script src="{{asset('js/jquery.min.js')}}"></script> 
     <script type="text/javascript" src="{{asset('js/jquery-validate.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+     <link rel="icon" href="{{ asset('logo.png') }}"> 
 <style type="text/css">
     
     .table-striped tr th,td{
@@ -66,6 +67,8 @@
                         <a class="btn btn-success" href="{{url('Metodos_de_pago')}}">Métodos de pago</a>
 
                         <a class="btn btn-success" href="{{url('Gastos')}}">Gastos</a>
+
+                        <a class="btn btn-success" href="{{url('Itinerario/create')}}">Itinerarios</a>
                     </nav>
                 </div>
             </div>

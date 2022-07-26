@@ -27,7 +27,9 @@ Route::resources([
 	'Unidades'=>'App\Http\Controllers\UnidadesController',
 	'Metodos_de_pago'=>'App\Http\Controllers\metodoPagoController',
 	'Servicios'=>'App\Http\Controllers\ServiciosController',
-	'Gastos'=>'App\Http\Controllers\GastosController'
+	'Gastos'=>'App\Http\Controllers\GastosController',
+	'Paradas'=>'App\Http\Controllers\ParadasController',
+	'Itinerario'=>'App\Http\Controllers\ItinerarioController'
 ]);
 Route::post('eliminareservas/{id}','App\Http\Controllers\ReservaController@eliminareservas')->name('eliminareservas');
 /*
