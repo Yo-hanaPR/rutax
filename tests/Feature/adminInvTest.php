@@ -53,7 +53,7 @@ public function test_registro_destino(){
         $direccion='Falcon';
         $url='una url'; 
         
-        $input=["nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>'COSAS QUE ME DIGA LA GENTE DEL DESTINO'];
+        $input=["nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>'COSAS QUE ME DIGA LA GENTE DEL DESTINO','distancia'=>'a 2 horas de caracas','phone'=>'041258755454','reference'=>'por el farmatodo de catia la mar','business_hours'=>'Abierto de 8 am a 9pm','history'=>'Es un pueblito pesquero donde ..... '];
          $response = $this->post('/Destinos',$input);
           $response->assertRedirect('home');
     }

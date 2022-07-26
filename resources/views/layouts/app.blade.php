@@ -21,18 +21,31 @@
 <script src="{{asset('js/jquery.min.js')}}"></script> 
     <script type="text/javascript" src="{{asset('js/jquery-validate.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+<style type="text/css">
+    
+    .table-striped tr th,td{
+    padding:30px;
+    vertical-align: top;
+    border:1px solid #d9e1dc;
+}
 
+.btn-success{
+    background-color:#0c120e;
+    border-color: #ffffff;
+}
+
+</style>
 <script type="text/javascript" src="{{asset('vue/vue.js')}}"></script> 
 <script type="text/javascript" src="{{asset('vue/vue-resource.js')}}"></script> 
 <script src="{{asset('bootstrap4.1-dist/js/bootstrap.min.js')}}"></script>
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid" style="background-color:#0e0e0e;">
+        <div class="container-fluid" style="background-color:#63ced9cc;">
             <div class="row">
                 <div class="col-md-4">
                     <a href="{{url('home')}}">
-                    <img src="{{asset('axie.png')}}" width="80" height="60"></a>
+                    <img src="{{asset('logo.png')}}" width="200" height="190" style="margin-top: -50px;"></a>
                 </div>
                 <div class="col-md-7 offset-1">
                     

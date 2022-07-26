@@ -48,7 +48,7 @@
 
 	</div>
 
-	<button type="submit" class="btn btn-success">Guardar</button>
+	<button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
 
 </div>
 

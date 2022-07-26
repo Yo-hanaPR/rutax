@@ -12,6 +12,7 @@
 					<th>Destino</th>
 					<th>Ubicación</th>
 					<th>Información</th>
+					<th>Teléfono</th>
 					<th>Acciones</th>
 				</tr>
 				@foreach($destinos as $destino)
@@ -19,6 +20,7 @@
 					<td>{{ $destino->nombre}}</td>
 					<td>{{ $destino->direccion}}</td>
 					<td>{{ $destino->url}}</td>
+					<td>{{ $destino->phone}}</td>
 
 					<td>
 						

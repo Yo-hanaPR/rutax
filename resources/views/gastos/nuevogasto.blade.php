@@ -49,7 +49,7 @@
 										@foreach($servicios as $servicio)
 					        		
 
-					        		<label>Gasto por concepto de {{$servicio->servicio}} para éste viaje</label> <input type="number" name="gasto_por_concepto_servicio[{{$servicio->id}}]">
+					        		<label>Gasto por concepto de {{$servicio->servicio}} para éste viaje</label> <input type="number" name="gasto_por_concepto_servicio[{{$servicio->id}}]" class="form-control">
 					        			@endforeach
 
 					        	</div>
@@ -57,7 +57,7 @@
 
 					        <span style="color:#9f1818;"><i>*Si te equivocas introduciendo algún monto, puedes corregirlo, pero debes actualizar todos los valores.</i></span>
 					    </div>
-					    	<button type="submit" class="btn btn-success">Guardar</button>
+					    	<button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
 					</div>
 				</form>
 		</div>

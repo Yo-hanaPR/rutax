@@ -31,7 +31,7 @@
 	    </div>
 	</div>
 
-	<button type="submit" class="btn btn-success">GUARDAR</button>
+	<button type="submit" class="btn btn-success btn-lg btn-block">GUARDAR</button>
 </form>
 
 @endsection

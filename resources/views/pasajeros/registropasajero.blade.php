@@ -10,27 +10,27 @@
 	<div class="container">
 	    <div class="row justify-content-rigth">
 	        <div class="col-md-6" >
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>NOMBRE</label>
 	        		<input type="text" class="form-control" name="nombre">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>APELLIDO</label>
 	        		<input type="text" class="form-control" name="apellido">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>CEDULA</label>
 	        		<input type="text" class="form-control" name="cedula">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>DIRECCION</label>
 	        		<input type="text" class="form-control" name="direccion">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>TELÉFONO</label>
 	        		<input type="text" class="form-control" name="telefono">
 	        	</div>
@@ -39,22 +39,22 @@
 	        </div>
 	        <div class="justify-content-center col-md-6">
 	        	<div>
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>CORREO</label>
 	        		<input type="email" class="form-control" name="correo">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>EDAD</label>
 	        		<input type="text" class="form-control" name="edad">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>STATUS</label>
 	        		<input type="text" class="form-control" name="status">
 	        	</div>
 
-	        	<div class="col-md-6">
+	        	<div >
 	        		<label>MÉTODO DE PAGO</label>
 	        		<select class="form-control" name="id_metodo_pago">
 	          			
@@ -70,7 +70,7 @@
 	        </div>
 	    </div>
 
-	    <input type="submit" class="btn btn-success" name="guardar" value="guardar">
+	    <input type="submit" class="btn btn-success btn-lg btn-block" name="guardar" value="guardar">
 	</div>
 </form>
 @endsection
