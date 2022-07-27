@@ -41,7 +41,6 @@ class DestinosController extends Controller
     public function store(Request $request)
     {
         //
-
         destinos::create(["nombre"=>$request->nombre,"direccion"=>$request->direccion,"url"=>$request->url,'detalles'=>$request->detalles]);
 
         return redirect('home');
