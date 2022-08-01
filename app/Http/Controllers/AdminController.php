@@ -27,6 +27,7 @@ class AdminController extends Controller
         $date = Carbon::now()->format('Y-m-d');
         $date= Carbon::parse($date);
         $viajesconcretados=0;
+        $viajesporconcretar=0;
         $ganancias_totales_viajes=0;
         $hoy=$date;
         $gastos_totales=0;
@@ -55,10 +56,12 @@ class AdminController extends Controller
                     }
                 }
                 $viajesconcretados= $viajesconcretados+1;
+            }else{
+                $viajesporconcretar=$viajesporconcretar+1;
             }
         }
         $ganancia_real= $ganancias_totales_viajes-$gastos_totales;
-    return view('summary',compact('cantpasajeros','cantviajes','viajes','reservas','date','viajesconcretados','ganancias_totales_viajes','gastos_totales','ganancia_real'));
+    return view('summary',compact('cantpasajeros','viajesporconcretar','viajes','reservas','date','viajesconcretados','ganancias_totales_viajes','gastos_totales','ganancia_real'));
     }
 }
 ?>

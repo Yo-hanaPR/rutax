@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\viaje;
 use App\Models\destinos;
 use App\Models\itinerario;
+use App\Models\paradas;
 use App\Models\unidades;
 
 class ViajesController extends Controller

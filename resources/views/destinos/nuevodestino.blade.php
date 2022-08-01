@@ -61,7 +61,7 @@
 	        	<h2>Sobre el sitio</h2>
 	        	<div >
 	        		<label>Detalles</label>
-	        		<input type="text" name="detalles" class="form-control" placeholder="Dejan llevar comidas? Tiene piscina? etc">
+	        		<textarea class="form-control" name="detalles" placeholder="Dejan llevar comidas? Tiene piscina? Posada? Los comercios reciben BS? etc"></textarea>
 	        	</div>
 
 	        	<div class="col-md-8">

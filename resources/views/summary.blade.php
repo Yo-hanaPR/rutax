@@ -9,7 +9,7 @@
 <h1>Aquí voy a mostrar progreso de cuanto llevo de la meta total de ganancia (barrita de progreso)</h1>
 pero la barrita de progreso mejor ponla para cada viaje, en el detalle de cada viaje puede ser.. Será mas facil asi.
 
-<h4>Total de viajes programados: {{$cantviajes}}</h4>
+<h4>Total de viajes por concretar: {{$viajesporconcretar}}</h4>
 <h4>Total de pasajeros: {{$cantpasajeros}}</h4>
 <h4>Total de reservas: {{$reservas}}</h4>
 <h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
