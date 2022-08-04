@@ -1,10 +1,11 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 
 <h1>Lista de destinos registrados</h1>
 
 <a class="btn btn-success" href="{{ url('/Destinos/create') }}">Registrar nuevo destino</a>
+
 <div class="container">
 	<div class="row justify-content-center">
 			<table class="table-striped" width="1000">

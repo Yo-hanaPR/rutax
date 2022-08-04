@@ -1,5 +1,6 @@
 
-@extends('layouts.app')
+@extends('adminlte::page')
+
 
 @section('content')
 <h1>Gastos asociados a cada viaje</h1>
@@ -33,7 +34,7 @@
 					        <div class="col-md-8" >
 					        	<div>
 					        		<label>Para cual viaje tuviste éstos gastos?</label>
-					        		<select class="form-control" name="id_viaje_asociado">
+					        		<x-adminlte-select name="id_viaje_asociado">
 					        			
 					        		@foreach($viajes as $viaje)
 					        			<option value="{{$viaje->id_viaje}}">
@@ -41,7 +42,7 @@
 					        			</option>
 					        		@endforeach
 
-					        		</select>
+					        		</x-adminlte-select>
 					        	</div>
 
 					        	<div>
@@ -57,7 +58,7 @@
 
 					        <span style="color:#9f1818;"><i>*Si te equivocas introduciendo algún monto, puedes corregirlo, pero debes actualizar todos los valores.</i></span>
 					    </div>
-					    	<button type="submit" class="btn btn-success btn-lg btn-block">Guardar</button>
+					    <center><x-adminlte-button label="GUARDAR" theme="primary" icon="fas fa-key" type="submit" class="btn"/> </center>
 					</div>
 				</form>
 		</div>

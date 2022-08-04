@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
 
 @section('content')
 
@@ -41,7 +42,7 @@
 					<label>Observaciones</label>
 					<textarea name="observaciones" class="form-control" width="100%"></textarea>
 				</div>
-				<button type="submit" class="btn btn-success btn-lg btn-block">GUARDAR</button>
+				<center><x-adminlte-button label="GUARDAR" theme="primary" icon="fas fa-key" type="submit" class="btn"/> </center>
 			</form>
 
 		</div>

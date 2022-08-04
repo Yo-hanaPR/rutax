@@ -17,7 +17,9 @@ use DB;
 class AdminController extends Controller
 {
     //
-
+    public function indexAdmin(){
+        return view('admin.index');
+    }
     public function home(){
 
         $cantpasajeros=pasajero::all()->count();

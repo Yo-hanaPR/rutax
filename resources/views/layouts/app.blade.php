@@ -93,5 +93,4 @@
 </body>
 
 
-<script src="{{asset('js/alpine.js')}}"></script> 
 </html>
