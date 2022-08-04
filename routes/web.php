@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 
-Route::get('home', 'App\Http\Controllers\AdminController@home');
+Route::get('home', 'App\Http\Controllers\AdminController@home')->name('home');
 Route::resources([
 	'Destinos'=>'App\Http\Controllers\DestinosController',
 	'Pasajeros'=>'App\Http\Controllers\PasajerosController',
