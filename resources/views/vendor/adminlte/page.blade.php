@@ -1,5 +1,7 @@
 @extends('adminlte::master')
-
+@section('js')
+<script src="{{asset('js/alpine.js')}}"></script> 
+@stop
 @inject('layoutHelper', 'JeroenNoten\LaravelAdminLte\Helpers\LayoutHelper')
 
 @section('adminlte_css')
@@ -13,7 +15,9 @@
 
 @section('body')
     <div class="wrapper">
-
+ <div x-data>
+        <button @click="alert('Alpine Js is working !')">Prueba ALPINE</button>
+    </div>
         {{-- Top Navbar --}}
         @if($layoutHelper->isLayoutTopnavEnabled())
             @include('adminlte::partials.navbar.navbar-layout-topnav')
@@ -50,3 +54,4 @@
     @stack('js')
     @yield('js')
 @stop
+

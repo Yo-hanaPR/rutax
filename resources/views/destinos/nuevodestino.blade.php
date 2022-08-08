@@ -7,7 +7,7 @@
        
         return {
         formData: {
-          nombre: '',
+          nombre: 'asdasd',
           direccion: '',
           url: '',
           detalles: '',
