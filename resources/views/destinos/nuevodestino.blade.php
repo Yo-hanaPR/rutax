@@ -55,7 +55,7 @@
 	        	<div >
 	        		<label>Que lugar es?</label>
 
-	        		<x-adminlte-input type="text" name="nombre">
+	        		<x-adminlte-input type="text" name="nombre" x-model="formData.nombre">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
