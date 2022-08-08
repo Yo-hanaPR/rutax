@@ -17,10 +17,6 @@ class CreateDestinosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('direccion');
-            $table->string('distancia');
-            $table->integer('telephone');
-            $table->integer('reference_point');
-            $table->integer('Hours');
             $table->string('url');
             $table->string('detalles');
             $table->string('distancia');

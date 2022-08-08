@@ -7,7 +7,7 @@
        
         return {
         formData: {
-          nombre: 'asdasd',
+          nombre: '',
           direccion: '',
           url: '',
           detalles: '',
@@ -27,7 +27,7 @@
       },
       body: JSON.stringify(this.formData)
     })
-    .then((data) => console.log(data)).catch((data)=> console.log('Error'));
+    .then((data) => this.message='Los datos se han guardado').catch((data)=> console.log('Error'));
     }
 
 
@@ -43,7 +43,6 @@
 	@method("post")
 	{{csrf_field()}}
 
-	<h1 x-text="formData.nombre"></h1>
 
 	<div class="container">
 	    <div class="row justify-content-center">
@@ -70,7 +69,7 @@
 	        		<label>Como llegar ahí?</label>
 
 
-	        		<x-adminlte-textarea type="text" name="direccion">
+	        		<x-adminlte-textarea type="text" name="direccion" x-model="formData.direccion">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -82,7 +81,7 @@
 	        	<div >
 	        		<label>Punto de referencia</label>
 
-	        		<x-adminlte-input type="text" name="reference">
+	        		<x-adminlte-input type="text" name="reference" x-model="formData.reference">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -93,7 +92,7 @@
 
 	        	<div >
 	        		<label>Cuanto tiempo toma llegar?</label>
-	        		<x-adminlte-input type="text" name="distancia">
+	        		<x-adminlte-input type="text" name="distancia" x-model="formData.distancia">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -113,7 +112,7 @@
 	        	<div >
 	        		<label>Documentación en la web</label>
 
-	        		<x-adminlte-input type="text" name="url">
+	        		<x-adminlte-input type="text" name="url" x-model="formData.url">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -125,7 +124,7 @@
 
 	        	<div >
 	        		<label>Horario de trabajo</label>
-	        		<x-adminlte-input type="text" name="business_hours">
+	        		<x-adminlte-input type="text" name="business_hours" x-model="formData.business_hours">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -137,7 +136,7 @@
 
 	        	<div >
 	        		<label>Teléfono</label>
-	        		<x-adminlte-input type="number" name="phone">
+	        		<x-adminlte-input type="number" name="phone" x-model="formData.phone">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-fire text-lightblue"></i>
@@ -152,7 +151,7 @@
 	        	<h2>Sobre el sitio</h2>
 	        	<div >
 
-	        		<x-adminlte-textarea name="detalles" label="Detalles" rows=5 igroup-size="sm"
+	        		<x-adminlte-textarea name="detalles" label="Detalles" x-model="formData.detalles" rows=5 igroup-size="sm"
 					    label-class="text-primary" placeholder="
 					    Dejan llevar comidas? 
 					    Tiene piscina? 
@@ -175,7 +174,7 @@
 
 	        	<div class="col-md-8">
 
-	        		<x-adminlte-textarea name="history" label="Historia" rows=5 igroup-size="sm"
+	        		<x-adminlte-textarea name="history" label="Historia" x-model="formData.Historia" rows=5 igroup-size="sm"
 					    label-class="text-primary" placeholder="" disable-feedback>
 					    <x-slot name="prependSlot">
 					        <div class="input-group-text">
@@ -190,7 +189,7 @@
 	    </div>
 	    	<center><x-adminlte-button label="GUARDAR" theme="primary" icon="fas fa-key" type="submit" class="btn"/> </center>
 	</div>
-	<h1 x-model="message"></h1>
+	<h1 x-text="message"></h1>
 </form>
 
 

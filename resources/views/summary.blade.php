@@ -6,31 +6,13 @@
 
 <h1>Resumen de operaciones</h1>
 <div
-    x-data="{
-        posts: {},
-
-        async retrievePosts() {
-            this.posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
-
-<<<<<<< HEAD
-            // log out all the posts to the console
-            console.log(this.posts);
-        }
-    }"
     >
-	<h1>Aquí voy a mostrar progreso de cuanto llevo de la meta total de ganancia (barrita de progreso)</h1>
-	pero la barrita de progreso mejor ponla para cada viaje, en el detalle de cada viaje puede ser.. Será mas facil asi.
-
-	<h4>Total de viajes programados: {{$cantviajes}}</h4>
-	<h4>Total de pasajeros: {{$cantpasajeros}}</h4>
-	<h4>Total de reservas: {{$reservas}}</h4>
-	<h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
-=======
+	
 <h4>Total de viajes por concretar: {{$viajesporconcretar}}</h4>
 <h4>Total de pasajeros: {{$cantpasajeros}}</h4>
 <h4>Total de reservas: {{$reservas}}</h4>
 <h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
->>>>>>> nazareth
+
 	
 
 	<h4>ganancias NETAS en viajes concretados: {{$ganancias_totales_viajes}} $</h4>
@@ -92,12 +74,6 @@
 
 <div>
 	
-<!--button
-    x-data="{ red: false }"
-    x-bind:class="red ? 'red' : ''"
-    @click="red = ! red">
-    Toggle Red
-</button-->
 
 
 
