@@ -54,9 +54,7 @@
 
 	        	<div >
 	        		<label>Que lugar es?</label>
-<<<<<<< HEAD
-	        		<input type="text" class="form-control" name="nombre" x-model="formData.nombre">
-=======
+
 	        		<x-adminlte-input type="text" name="nombre">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
@@ -64,15 +62,13 @@
 					        </div>
 					    </x-slot>
 					</x-adminlte-input>
->>>>>>> nazareth
+
 	        	</div>
 
 	        	<div >
 
 	        		<label>Como llegar ahí?</label>
-<<<<<<< HEAD
-	        		<textarea name="direccion" class="form-control" x-model="formData.direccion"></textarea>
-=======
+
 
 	        		<x-adminlte-textarea type="text" name="direccion">
 	        			<x-slot name="prependSlot">
@@ -105,7 +101,6 @@
 					    </x-slot>
 					</x-adminlte-input>
 
->>>>>>> nazareth
 	        	</div>
 
 
@@ -117,9 +112,7 @@
 
 	        	<div >
 	        		<label>Documentación en la web</label>
-<<<<<<< HEAD
-	        		<input type="text" name="url" class="form-control" x-model="formData.url">
-=======
+
 	        		<x-adminlte-input type="text" name="url">
 	        			<x-slot name="prependSlot">
 					        <div class="input-group-text">
@@ -127,7 +120,7 @@
 					        </div>
 					    </x-slot>
 					</x-adminlte-input>
->>>>>>> nazareth
+
 	        	</div>
 
 	        	<div >
@@ -141,11 +134,7 @@
 					</x-adminlte-input>
 	        	</div>
 
-<<<<<<< HEAD
-	        	<div class="col-md-4">
-	        		<label>Detalles</label>
-	        		<input type="text" name="detalles" class="form-control" x-model="formData.detalles">
-=======
+
 	        	<div >
 	        		<label>Teléfono</label>
 	        		<x-adminlte-input type="number" name="phone">
@@ -195,7 +184,7 @@
 					    </x-slot>
 					    
 					</x-adminlte-textarea>
->>>>>>> nazareth
+
 	        	</div>
 	        </div>
 	    </div>
@@ -204,11 +193,6 @@
 	<h1 x-model="message"></h1>
 </form>
 
-<<<<<<< HEAD
-@endsection
 
-
-=======
 
 @endsection
->>>>>>> nazareth
