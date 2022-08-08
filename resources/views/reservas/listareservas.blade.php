@@ -1,5 +1,16 @@
 @extends('adminlte::page')
-
+{{-- Setup data for datatables --}}
+@php
+$heads = [
+    'Número',
+    'A nombre de',
+    'Hacia el destino',
+    'Fecha de salida (AAAA/MM/DD)',
+    'Hora de salida','Pagó en Promoción?','Monto cancelado',
+    ['label' => 'Monto Restante'],'Costo Total del FULLDAY',
+    ['label' => 'Fecha de reservación', 'no-export' => true, 'width' => 5],'Acciones'
+];
+@endphp
 
 @section('content')
 
@@ -12,20 +23,9 @@
 
 		
 
-			<table class="table-striped" width="100">
-				<tr>
-					<th>Número</th>
-					<th>A nombre de</th>
-					<th>Hacia el destino</th>
-					<th>Fecha de salida (AAAA/MM/DD)</th>
-					<th>Hora de salida </th>
-					<th>Pagó en Promoción?</th>
-					<th>Monto cancelado</th>
-					<th>Monto Restante</th>
-					<th>Costo Total del FULLDAY</th>
-					<th>Fecha de reservación</th>
-					<th>Acciones</th>
-				</tr>
+			<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
+				
 				@foreach($reservas as $reserva)
 					<tr></td>
 						<td> {{$reserva->id}}</td>
@@ -54,7 +54,7 @@
 						</td>
 					</tr>
 				@endforeach
-			</table>
+			</x-adminlte-datatable>
 	</div>
 </div>
 @endsection

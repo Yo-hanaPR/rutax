@@ -1,6 +1,14 @@
 @extends('adminlte::page')
 
-
+{{-- Setup data for datatables --}}
+@php
+$heads = [
+    'Lugar',
+    'Punto de referencia',
+    'Horario',
+    'Servicio','Metodo de pago','Acciones'
+];
+@endphp
 @section('content')
 
 <h1>Paradas registradas Disponibles</h1>
@@ -8,15 +16,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-7">
-			<table class="table-striped" width="100%">
-				<tr>
-					<th>Lugar</th>
-					<th>Punto de referencia</th>
-					<th>Horario</th>
-					<th>Servicio</th>
-					<th>Metodo de pago</th>
-					<th>Acciones</th>
-				</tr>
+			<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
+				
 			@foreach($paradas as $parada)
 				<tr>
 					<td>{{$parada->lugar}}</td>
@@ -36,7 +38,7 @@
 					</td>
 				</tr>
 			@endforeach
-			</table>
+	</x-adminlte-datatable>
 		</div>
 
 		<div class="col-md-5" style="background-color:lightblue;padding:30px;">

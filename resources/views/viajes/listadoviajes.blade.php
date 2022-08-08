@@ -1,5 +1,15 @@
 @extends('adminlte::page')
-
+{{-- Setup data for datatables --}}
+@php
+$heads = [
+    'Número',
+    'Viaje Hacia',
+    'Salida el día',
+    'A las',
+    'Cantidad de Pasajeros','Cuantos faltan','Nos iremos en una unidad',
+    ['label' => 'Costo del full day por puesto'],'Ganancia total estimada del viaje','Acciones'
+];
+@endphp
 
 @section('content')
 
@@ -10,20 +20,9 @@
 	<div class="row justify-content-center">
 
 		
-			<table class="table-striped" width="1000">
-				<tr>
-					<th>Número</th>
-					<th>Viaje Hacia</th>
-					<th>Salida el día</th>
-
-					<th>A las</th>
-					<th>Cantidad de Pasajeros</th>
-					<th>Cuantos faltan</th>
-					<th>Nos iremos en una unidad</th>
-					<th>Costo del full day por puesto</th>
-					<th>Ganancia total estimada del viaje</th>
-					<th>Acciones</th>
-				</tr>
+			<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
+				
 				@foreach($viajes as $viaje)
 				<tr>
 					<td>{{ $viaje->id_viaje}}</td>
@@ -55,13 +54,16 @@
 							Para eliminar las reservas asociadas entra a la página de detalles del viaje para eliminarlas de forma masiva.
 							Una vez hecho ésto podrás utilizar éste botón para eliminar el viaje.
 							Como poner una pantalla de error personalizada si el usuario le da click a éste botón no salga el error de laravel?
+							El viaje tampoco puede tener Gastos asociados ni itinerarios asociados xD
+							Como incluir ésta información aquí en el front?
+							Bueno, jala los datos de las tablas de gastos, itinerario, y reserva
 						<a href="{{ url('Viajes/' . $viaje->id_viaje) }} " class="btn btn-info">VER</a>
 							
 						</form>
 					</td>
 				</tr>
 				@endforeach
-			</table>
+	</x-adminlte-datatable>
 	</div>
 </div>
 @endsection

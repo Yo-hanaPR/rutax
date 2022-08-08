@@ -1,4 +1,10 @@
 @extends('adminlte::page')
+{{-- Setup data for datatables --}}
+@php
+$heads = [
+    'Nombre Servicio'
+];
+@endphp
 
 @section('content')
 
@@ -7,16 +13,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-7">
-			<table class="table-striped" width="100%">
-				<tr>
-					<th>Nombre Servicio</th>
-				</tr>
+			<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
+				
 			@foreach($servicios as $servicio)
 				<tr>
 					<td>{{$servicio->servicio}}</td>
 				</tr>
 			@endforeach
-			</table>
+	</x-adminlte-datatable>
 		</div>
 
 		<div class="col-md-5" style="background-color:lightblue;padding:30px;">

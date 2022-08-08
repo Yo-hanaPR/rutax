@@ -20,7 +20,7 @@
 				 			
 				 		@endfor
 				 		<br><br>
-				 		<h5><b>Gastos totales de éste viaje:</b> {{$viaje->GastosDelViaje->sum('costo')}} </h5> 
+				 		<h5 class="text-navy"><b>Gastos totales de éste viaje:</b> {{$viaje->GastosDelViaje->sum('costo')}} </h5> 
 				 	@endforeach
 				 	
 		</div>

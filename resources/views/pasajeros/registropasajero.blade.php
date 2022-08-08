@@ -12,27 +12,57 @@
 	        <div class="col-md-6" >
 	        	<div >
 	        		<label>NOMBRE</label>
-	        		<input type="text" class="form-control" name="nombre">
+	        		<x-adminlte-input type="text" class="form-control" name="nombre">
+        			<x-slot name="prependSlot">
+				        <div class="input-group-text">
+				            <i class="fas fa-fire text-lightblue"></i>
+				        </div>
+				    </x-slot>
+				</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>APELLIDO</label>
-	        		<input type="text" class="form-control" name="apellido">
+	        		<x-adminlte-input type="text" class="form-control" name="apellido">
+	        		<x-slot name="prependSlot">
+				        <div class="input-group-text">
+				            <i class="fas fa-fire text-lightblue"></i>
+				        </div>
+				    </x-slot>
+				</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>CEDULA</label>
-	        		<input type="text" class="form-control" name="cedula">
+	        		<x-adminlte-input type="text" class="form-control" name="cedula">
+	        		<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>DIRECCION</label>
-	        		<input type="text" class="form-control" name="direccion">
+	        		<x-adminlte-input type="text" class="form-control" name="direccion">
+	        			<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>TELÉFONO</label>
-	        		<input type="text" class="form-control" name="telefono">
+	        		<x-adminlte-input type="text" class="form-control" name="telefono">
+	        			<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	
@@ -41,21 +71,41 @@
 	        	<div>
 	        	<div >
 	        		<label>CORREO</label>
-	        		<input type="email" class="form-control" name="correo">
+	        		<x-adminlte-input type="email" class="form-control" name="correo">
+	        			<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>EDAD</label>
-	        		<input type="text" class="form-control" name="edad">
+	        		<x-adminlte-input type="text" class="form-control" name="edad">
+	        			<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>STATUS</label>
-	        		<input type="text" class="form-control" name="status">
+	        		<x-adminlte-input type="text" class="form-control" name="status">
+	        			<x-slot name="prependSlot">
+					        <div class="input-group-text">
+					            <i class="fas fa-fire text-lightblue"></i>
+					        </div>
+					    </x-slot>
+					</x-adminlte-input>
 	        	</div>
 
 	        	<div >
 	        		<label>MÉTODO DE PAGO</label>
+
+	        		
 	        		<select class="form-control" name="id_metodo_pago">
 	          			
 		          			@foreach($metodos_pago as $metodo_pago)

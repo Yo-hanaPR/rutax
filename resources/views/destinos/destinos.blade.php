@@ -2,20 +2,25 @@
 
 @section('content')
 
+{{-- Setup data for datatables --}}
+	@php
+	$heads = [
+	    'Destino',
+	    'Ubicación',
+	    'Información',
+	    'Teléfono',
+	    'Acciones'
+	];
+	@endphp
 <h1>Lista de destinos registrados</h1>
 
 <a class="btn btn-success" href="{{ url('/Destinos/create') }}">Registrar nuevo destino</a>
 
 <div class="container">
 	<div class="row justify-content-center">
-			<table class="table-striped" width="1000">
-				<tr>
-					<th>Destino</th>
-					<th>Ubicación</th>
-					<th>Información</th>
-					<th>Teléfono</th>
-					<th>Acciones</th>
-				</tr>
+			<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
+				
 				@foreach($destinos as $destino)
 				<tr>
 					<td>{{ $destino->nombre}}</td>
@@ -37,7 +42,7 @@
 					</td>
 				</tr>
 				@endforeach
-			</table>
+			</x-adminlte-datatable>
 	</div>
 </div>
 @endsection

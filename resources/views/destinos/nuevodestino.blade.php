@@ -107,7 +107,17 @@
 	        	<div >
 
 	        		<x-adminlte-textarea name="detalles" label="Detalles" rows=5 igroup-size="sm"
-					    label-class="text-primary" placeholder="Dejan llevar comidas? Tiene piscina? Posada? Los comercios reciben BS? etc" disable-feedback>
+					    label-class="text-primary" placeholder="
+					    Dejan llevar comidas? 
+					    Tiene piscina? 
+					    Posada? 
+					    Los comercios reciben BS? 
+					    Cual es la temperatura del agua?
+					   	Es de fuerte oleaje?
+					   	Tiene sanitarios? Duchas? Estacionamiento?
+					   	Tiene Piedras? Tiene erizos?
+					   	Es grande la playa?
+					   	Se puede hacer buceo? Snorkling? Surfing?" disable-feedback>
 					    <x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-lg fa-comment-dots text-primary"></i>
@@ -120,7 +130,7 @@
 	        	<div class="col-md-8">
 
 	        		<x-adminlte-textarea name="history" label="Historia" rows=5 igroup-size="sm"
-					    label-class="text-primary" placeholder="Dejan llevar comidas? Tiene piscina? Posada? Los comercios reciben BS? etc" disable-feedback>
+					    label-class="text-primary" placeholder="" disable-feedback>
 					    <x-slot name="prependSlot">
 					        <div class="input-group-text">
 					            <i class="fas fa-lg fa-comment-dots text-primary"></i>

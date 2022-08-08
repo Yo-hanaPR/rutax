@@ -288,9 +288,9 @@ return [
         ],
         [
             'text'=>'Paradas',
-            'icon'=>'fas fa-fw fa-star',
+            'icon'=>'fas fa-fw fa-stop',
             'route'=>'Paradas.index',
-            'icon_color'=>'warning'
+            'icon_color'=>'Lightblue'
         ],
         ['text'=>' Servicios',
           'icon'=>'fas fa-fw fa-star',
@@ -298,7 +298,7 @@ return [
           'submenu'=>[
                 [
                 'text'=>'Servicios',
-                'icon'=>'fas fa-fw fa-star',
+                'icon'=>'fas fa-fw fa-smile',
                 'route'=>'Servicios.index',
                 'icon_color'=>'warning'
               ],
