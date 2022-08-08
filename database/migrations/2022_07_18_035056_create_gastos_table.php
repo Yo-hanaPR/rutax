@@ -19,6 +19,8 @@ class CreateGastosTable extends Migration
             $table->integer('id_servicio');
             $table->integer('costo')->nullable();
             $table->timestamps();
+
+            
         });
     }
 

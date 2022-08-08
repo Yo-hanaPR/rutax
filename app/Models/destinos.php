@@ -11,5 +11,5 @@ class destinos extends Model
 
     protected $table = 'destinos';
 
-   protected $fillable  = ['nombre','direccion','url','detalles'];
+   protected $fillable  = ['nombre','direccion','url','detalles','distancia','phone','reference','business_hours','history'];
 }

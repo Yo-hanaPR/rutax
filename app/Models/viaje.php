@@ -24,7 +24,9 @@ class viaje extends Model
   public function PasajerosqueViajan(){
     return $this->hasMany(viaje_pasajero::class,'id_viaje','id_viaje');
   }
-
+  public function ItinerarioViaje(){
+    return $this->hasOne(Itinerario::class,'id_viaje','id_viaje');
+  }
   ////
 
   public function GastosDelViaje(){

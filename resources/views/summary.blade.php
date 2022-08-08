@@ -1,6 +1,6 @@
 
 
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 
@@ -12,6 +12,7 @@
         async retrievePosts() {
             this.posts = await (await fetch('https://jsonplaceholder.typicode.com/posts')).json();
 
+<<<<<<< HEAD
             // log out all the posts to the console
             console.log(this.posts);
         }
@@ -24,6 +25,12 @@
 	<h4>Total de pasajeros: {{$cantpasajeros}}</h4>
 	<h4>Total de reservas: {{$reservas}}</h4>
 	<h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
+=======
+<h4>Total de viajes por concretar: {{$viajesporconcretar}}</h4>
+<h4>Total de pasajeros: {{$cantpasajeros}}</h4>
+<h4>Total de reservas: {{$reservas}}</h4>
+<h4>Total de viajes concretados:{{$viajesconcretados}}</h4>	
+>>>>>>> nazareth
 	
 
 	<h4>ganancias NETAS en viajes concretados: {{$ganancias_totales_viajes}} $</h4>

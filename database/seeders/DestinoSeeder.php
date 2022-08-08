@@ -21,10 +21,10 @@ class DestinoSeeder extends Seeder
         $detalles='DESTALLES AHI ADICIONALES';
         
         	\DB::table('destinos')->insert([
-                "nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>$detalles
+                "nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>$detalles,'distancia'=>'a 2 horas de caracas','phone'=>'04125478450','reference'=>'por el farmatodo de catia la mar','business_hours'=>'Abierto de 8 am a 9pm','history'=>'Es un pueblito pesquero donde ..... '
             ]);
             \DB::table('destinos')->insert([
-                "nombre"=>"La guaira","direccion"=>"La guaira","url"=>"SU URL",'detalles'=>$detalles
+                "nombre"=>"La guaira","direccion"=>"La guaira","url"=>"SU URL",'detalles'=>$detalles,'distancia'=>'a 2 horas de caracas','phone'=>'04125875544','reference'=>'por el farmatodo de catia la mar','business_hours'=>'Abierto de 8 am a 9pm','history'=>'Es un pueblito pesquero donde ..... '
             ]);
 
             

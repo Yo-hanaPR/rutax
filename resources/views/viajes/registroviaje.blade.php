@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 
@@ -8,8 +8,8 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8" >
-        	<div class="col-md-4">
+        <div class="col-md-6" >
+        	<div class="col-md-5">
         		<label>Hacia donde vamos ésta vez?</label>
         		<select class="form-control" name="destino">
 	          			
@@ -23,21 +23,7 @@
         	</div>
 			
 					
-	        <div>
-	        	<label>Cuando nos vamos?</label>
-	        	<input type="date" name="fecha_salida">
-
-	        	<label>A que hora salimos?</label>
-	        	<input type="time" name="hora_salida">
-	        </div>
-
-		    <div>
-		    	<label>Cuanto valdrá el full day?</label>
-		    	<input type="text" name="precio_fijo">
-		    	
-		    </div>
-
-		    <div>
+	        <div class="col-md-5">
 		    	<label>En cuál carro nos vamos?</label>
 		    	<select class="form-control" name="id_unidad">
 	          			
@@ -53,9 +39,29 @@
 		    </div>
 		</div>
 
-	</div>
+		<div class="col-md-4">
+			
+			<div >
+	        	<label>Cuando nos vamos?</label>
+	        	<input type="date" name="fecha_salida" class="form-control">
 
-	<button type="submit" class="btn btn-success">Guardar</button>
+	        	<label>A que hora salimos?</label>
+	        	<input type="time" name="hora_salida" class="form-control">
+	        </div>
+
+		    <div >
+		    	<label>Cuanto valdrá el full day?</label>
+		    	<input type="text" name="precio_fijo">
+		    	
+		    </div>
+
+		    
+		</div>
+
+		
+		
+	</div>
+<center><x-adminlte-button label="GUARDAR" theme="primary" icon="fas fa-key" type="submit" class="btn"/> </center>
 
 </div>
 

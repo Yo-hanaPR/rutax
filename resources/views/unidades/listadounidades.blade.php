@@ -1,4 +1,13 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+{{-- Setup data for datatables --}}
+@php
+$heads = [
+    'Número',
+    'Tipo',
+    'Placa',
+    'Cantidad de puestos','Acciones'
+];
+@endphp
 
 @section('content')
 
@@ -7,12 +16,13 @@
 <a class="btn btn-success" href="{{ url('/Unidades/create') }}">Nueva unidad</a>
 <div class="container">
 	<div class="row justify-content-center">
-		<table class="table-striped" width="1000">
+		<x-adminlte-datatable id="table2" :heads="$heads" head-theme="dark"
+	    striped hoverable bordered compressed>
 			<tr>
-				<th>Número</th>
-				<th>Tipo</th>
-				<th>Placa</th>
-				<th>Cantidad de puestos</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
 			</tr>
 			@foreach($unidades as $unidad)
 			<tr>
@@ -21,9 +31,18 @@
 
 				<td>{{$unidad->placa}}</td>
 				<td>{{$unidad->cant_puestos}}</td>
+				<td> <button class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit" ><i class="fa fa-lg fa-fw fa-pen"></i></button>
+					<button class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete"><i class="fa fa-lg fa-fw fa-trash"></i></button>
+
+					<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
+	                   <i class="fa fa-lg fa-fw fa-eye"></i>
+	               </button>
+
+
+				</td>
 			</tr>
 			@endforeach
-		</table>
+	</x-adminlte-datatable>
 	</div>
 </div>
 		@endsection

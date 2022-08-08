@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\viaje;
 use App\Models\destinos;
+use App\Models\itinerario;
+use App\Models\paradas;
 use App\Models\unidades;
 
 class ViajesController extends Controller
@@ -32,12 +34,13 @@ class ViajesController extends Controller
         $viajes= viaje::all();
         $destinos= destinos::all();
         $unidades= unidades::all();
+        $paradas= paradas::all();
 
 
         foreach ($unidades as $unidad) {
             
         }
-         return view('viajes.registroviaje',compact('viajes','destinos','unidades'));
+         return view('viajes.registroviaje',compact('viajes','destinos','unidades','paradas'));
     }
 
     /**
@@ -55,6 +58,8 @@ class ViajesController extends Controller
         $ganancia_total= $request->precio_fijo*$puestosunidadViaje;
 
         viaje::create(["id_destino"=>$request->destino,"precio_fijo"=>$request->precio_fijo,"fecha_salida"=>$request->fecha_salida,"hora_salida"=>$request->hora_salida,"id_unidad"=>$request->id_unidad,'ganancia_total'=>$ganancia_total]);
+
+        
 
 
         return redirect('home');

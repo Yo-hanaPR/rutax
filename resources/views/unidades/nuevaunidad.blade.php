@@ -1,5 +1,5 @@
+@extends('adminlte::page')
 
-@extends('layouts.app')
 
 @section('content')
 
@@ -31,7 +31,7 @@
 	    </div>
 	</div>
 
-	<button type="submit" class="btn btn-success">GUARDAR</button>
+	<center><x-adminlte-button label="GUARDAR" theme="primary" icon="fas fa-key" type="submit" class="btn"/> </center>
 </form>
 
 @endsection

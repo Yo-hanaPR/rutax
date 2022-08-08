@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 
@@ -9,18 +9,30 @@
 				<tr>
 					<th>Destino</th>
 					<th>Ubicación</th>
+					<th>Punto de referencia</th>
+					<th>Tiempo de viaje</th>
 					<th>Información</th>
+					<th>Horario de trabajo</th>
+					<th>Contacto</th>
 				</tr>
 				@foreach($destino as $info)
 				<tr>
 					<td>{{ $info->nombre}}</td>
 					<td>{{ $info->direccion}}</td>
+					<td>{{ $info->reference}}</td>
+					<td>{{ $info->distancia}}</td>
 					<td>{{ $info->url}}</td>
+					<td>{{ $info->business_hours}}</td>
+					<td><b>{{$info->phone}}</b></td>
 				</tr>
 
 				<tr>
 					<td colspan="3">
-					<center>{{ $info->detalles}}
+					<center>{{ $info->detalles}} -
+					
+
+					<h1>Historia</h1>
+					<b>{{$info->history}}</b>
 						</center>
 					</td>
 				</tr>

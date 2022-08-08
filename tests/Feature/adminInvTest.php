@@ -41,6 +41,20 @@ class adminInvTest extends TestCase
 /*
 /***********************************************/
 /**/
+
+/*public function test_elimina_parada(){
+  $this->withoutExceptionHandling();
+   $response =$this->delete('/Paradas/1');
+              $response->assertRedirect('home');
+}*/
+/*
+public function test_registro_parada(){
+  $input=['lugar'=>'Mi arepa - Maracay','pto_referencia'=>'No sé','horario'=>'de 8 am a 5 pm','servicio'=>'arepera','metodo_pago'=>'Bolivares y divisas'];
+
+  $response = $this->post('/Paradas',$input);
+          $response->assertRedirect('home');
+
+}*/
 /*public function testregistroServicio(){
 
  $response = $this->post('/Servicios',["servicio"=>'Karaoke']);
@@ -53,15 +67,15 @@ public function test_registro_destino(){
         $direccion='Falcon';
         $url='una url'; 
         
-        $input=["nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>'COSAS QUE ME DIGA LA GENTE DEL DESTINO'];
+        $input=["nombre"=>$nombre,"direccion"=>$direccion,"url"=>$url,'detalles'=>'COSAS QUE ME DIGA LA GENTE DEL DESTINO','distancia'=>'a 2 horas de caracas','phone'=>'041258755454','reference'=>'por el farmatodo de catia la mar','business_hours'=>'Abierto de 8 am a 9pm','history'=>'Es un pueblito pesquero donde ..... '];
          $response = $this->post('/Destinos',$input);
           $response->assertRedirect('home');
     }
-*//*
+*/
 
 public function test_registro_viaje(){
 
-        $id_destino='3';
+        $id_destino='1';
         $precio_fijo='19'; 
         $fecha_salida='2020-05-02';
         $hora_salida='02:30 p. m.';
@@ -71,7 +85,14 @@ public function test_registro_viaje(){
          $response = $this->post('/Viajes',$input);
           $response->assertRedirect('home');
     }
-*/
+public test_registro_itinerario(){
+  $input=['actividades'=>'Ski',
+            'id_viaje'=>1,
+            'punto_salida'=>'Los dos caminos',
+            'punto_regreso'=>'La cruz',
+            'id_parada'=>1,
+            'ruta'=>'Llegaremos a todasana, pasaremos ahi la tarde, despues nos vamos en peñero hasta chuspa y tal y tal']
+}
     /*
 public function test_registro_pasajero(){
 
@@ -212,6 +233,7 @@ public function test_elimina_reserva(){
    $response =$this->delete('/Reserva/2');
               $response->assertRedirect('home');
 }
+
 */
 
 /*
