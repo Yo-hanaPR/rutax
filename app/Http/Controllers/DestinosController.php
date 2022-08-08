@@ -70,6 +70,8 @@ class DestinosController extends Controller
     public function edit($id)
     {
         //
+        $destino = destinos::find($id);
+        return response()->json($destino);
     }
 
     /**

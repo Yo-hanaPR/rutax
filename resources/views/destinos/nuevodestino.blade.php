@@ -5,20 +5,22 @@
 <script type="text/javascript">
 	
 	function contactForm() {
-        /**
-			Dentro de ésta funcion puedo empezar a programar con alpine
-
-        */
+       
         return {
         formData: {
           nombre: '',
           direccion: '',
           url: '',
-          detalles: ''
+          detalles: '',
+          distancia:'2 horas',
+          phone:'123123',
+          reference:'al lado de carenero',
+          business_hours:'Aboerto de 8 a 9',
+          history:'Es un pueblo lindo'
         },
         message:'',
          submitData() {
-      fetch( '{{route("Destinos.store")}}'    , {
+      fetch( '{{route("Destinos.store")}}', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -38,36 +40,35 @@
 </script>
 <h1>Registrar nuevo destino</h1>
 
-<!--input type="hidden" name="ruta" value="{{route('Destinos.store')}}" id="ruta"-->
 <form role="form" x-data="contactForm()" @submit.prevent="submitData">
 	@method("post")
 	{{csrf_field()}}
 
-	
+	<h1 x-text="formData.nombre"></h1>
 
 	<div class="container">
 	    <div class="row justify-content-center">
 	        <div class="col-md-8" >
 	        	<div class="col-md-4">
 	        		<label>Que lugar es?</label>
-	        		<input type="text" class="form-control" name="nombre" x-model="FormData.nombre">
+	        		<input type="text" class="form-control" name="nombre" x-model="formData.nombre">
 	        	</div>
 
 	        	<div class="col-md-4">
 	        		<label>Como llegar ahí?</label>
-	        		<textarea name="direccion" class="form-control" x-model="FormData.direccion"></textarea>
+	        		<textarea name="direccion" class="form-control" x-model="formData.direccion"></textarea>
 	        	</div>
 
 
 	        	<div class="col-md-4">
 	        		<label>Documentación en la web</label>
-	        		<input type="text" name="url" class="form-control" x-model="FormData.url">
+	        		<input type="text" name="url" class="form-control" x-model="formData.url">
 	        	</div>
 
 
 	        	<div class="col-md-4">
 	        		<label>Detalles</label>
-	        		<input type="text" name="detalles" class="form-control" x-model="FormData.detalles">
+	        		<input type="text" name="detalles" class="form-control" x-model="formData.detalles">
 	        	</div>
 	        </div>
 	    </div>
